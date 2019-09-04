@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Selectboxes</title>
+</head>
+<body>
+	<form>
+		<select id="datalistOne" onchange="updatingSecondSelect(this, document.getElementById('datalistTwo'), document.getElementById('datalistThree'))">
+			<option value="">Select First Option</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+		<select id="datalistTwo" style="display: none" onchange="updatingThirdSelect(document.getElementById('datalistOne'), this, document.getElementById('datalistThree'))">
+		</select>
+		<select id="datalistThree" style="display: none">
+		</select>
+	</form>
+	<script src="./src/script/script.js"></script>
+</body>
+</html>
